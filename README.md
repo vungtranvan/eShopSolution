@@ -9,5 +9,8 @@
 --Microsoft.Extensions.Configuration.FileExtensions
 --Microsoft.Extensions.Configuration.Json
 --Microsoft.AspNetCore.Identity.EntityFrameworkCore
+
+-eShopSolution.ViewModels:
+--Microsoft.AspNetCore.Http.Features
 ## How to configure and run
 ## How to contribute
