@@ -4,7 +4,6 @@ using eShopSolution.Data.EF;
 using eShopSolution.Data.Entities;
 using eShopSolution.Utilities.Exceptions;
 using eShopSolution.ViewModels.Catalog.Products;
-using eShopSolution.ViewModels.Catalog.Products.Manage;
 using eShopSolution.ViewModels.Common;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +13,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+
 
 namespace eShopSolution.Application.Catalog.Products
 {
@@ -98,7 +98,7 @@ namespace eShopSolution.Application.Catalog.Products
             return await _context.SaveChangesAsync();
         }
 
-        public async Task<PagedResult<ProductViewModel>> GetAllPaning(GetProductPagingRequest request)
+        public async Task<PagedResult<ProductViewModel>> GetAllPaning(GetManagerProductPagingRequest request)
         {
             //1.Select join
             var query = from p in _context.Products
