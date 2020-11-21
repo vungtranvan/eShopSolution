@@ -12,5 +12,9 @@
 
 -eShopSolution.ViewModels:
 --Microsoft.AspNetCore.Http.Features
+
+
+-eShopSolution.BackendApi
+--Swashbuckle.AspNetCore
 ## How to configure and run
 ## How to contribute
