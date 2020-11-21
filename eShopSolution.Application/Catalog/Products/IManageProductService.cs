@@ -1,5 +1,4 @@
 ﻿using eShopSolution.ViewModels.Catalog.Products;
-using eShopSolution.ViewModels.Catalog.Products.Manage;
 using eShopSolution.ViewModels.Common;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
@@ -23,7 +22,7 @@ namespace eShopSolution.Application.Catalog.Products
 
         //Task<List<ProductViewModel>> GetAll(); chưa cần
 
-        Task<PagedResult<ProductViewModel>> GetAllPaning(GetProductPagingRequest request);
+        Task<PagedResult<ProductViewModel>> GetAllPaning(GetManagerProductPagingRequest request);
 
         Task<int> AddImage(int productId, List<IFormFile> files);
 
