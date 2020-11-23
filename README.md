@@ -16,5 +16,10 @@
 
 -eShopSolution.BackendApi
 --Swashbuckle.AspNetCore
+
+
+-
+--System.IdentityModel.Tokens.Jwt
+-- Microsoft.IdentityModel.Tokens
 ## How to configure and run
 ## How to contribute
