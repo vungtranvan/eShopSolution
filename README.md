@@ -16,6 +16,7 @@
 
 -eShopSolution.BackendApi
 --Swashbuckle.AspNetCore
+-- FluentValidation.AspNetCore
 
 
 -
