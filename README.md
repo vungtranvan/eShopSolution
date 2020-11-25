@@ -13,6 +13,9 @@
 -eShopSolution.ViewModels:
 --Microsoft.AspNetCore.Http.Features
 
+-eShopSolution.AdminApp
+--Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation
+Microsoft.VisualStudio.Web.CodeGeneration.Design
 
 -eShopSolution.BackendApi
 --Swashbuckle.AspNetCore
