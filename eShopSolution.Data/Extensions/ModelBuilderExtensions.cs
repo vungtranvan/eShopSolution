@@ -117,6 +117,15 @@ namespace eShopSolution.Data.Extensions
                 RoleId = roleId,
                 UserId = adminId
             });
+
+            modelBuilder.Entity<Slider>().HasData(
+               new Slider() { Id = 1, Name = "Second Thumbnail label", Description = "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.", Image = "/themes/images/carousel/1.png", Url = "#", SortOrder = 1, Status = Status.Active },
+               new Slider() { Id = 2, Name = "Second Thumbnail label", Description = "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.", Image = "/themes/images/carousel/2.png", Url = "#", SortOrder = 2, Status = Status.Active },
+               new Slider() { Id = 3, Name = "Second Thumbnail label", Description = "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.", Image = "/themes/images/carousel/3.png", Url = "#", SortOrder = 3, Status = Status.Active },
+               new Slider() { Id = 4, Name = "Second Thumbnail label", Description = "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.", Image = "/themes/images/carousel/4.png", Url = "#", SortOrder = 4, Status = Status.Active },
+               new Slider() { Id = 5, Name = "Second Thumbnail label", Description = "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.", Image = "/themes/images/carousel/5.png", Url = "#", SortOrder = 5, Status = Status.Active },
+               new Slider() { Id = 6, Name = "Second Thumbnail label", Description = "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.", Image = "/themes/images/carousel/6.png", Url = "#", SortOrder = 6, Status = Status.Active }
+               );
         }
     }
 }
