@@ -37,7 +37,8 @@ namespace eShopSolution.WebApp.Controllers
             var viewModel = new HomeViewModel()
             {
                 Slides = await _sliderApiClient.GetAll(),
-                FeaturedProducts = await _productApiClient.GetFeaturedProducts(culture, SystemConstants.ProductSettings.NumberOfProductFeatured)
+                FeaturedProducts = await _productApiClient.GetFeaturedProducts(culture, SystemConstants.ProductSettings.NumberOfProductFeatured),
+                LatestProducts = await _productApiClient.GetLatestProducts(culture, SystemConstants.ProductSettings.NumberOfProductLatest)
             };
             return View(viewModel);
         }
