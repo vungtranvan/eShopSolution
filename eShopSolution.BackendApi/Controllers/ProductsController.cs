@@ -17,7 +17,7 @@ namespace eShopSolution.BackendApi.Controllers
     public class ProductsController : ControllerBase
     {
         public readonly IProductService _productService;
-        
+
         public ProductsController(IProductService productService)
         {
             _productService = productService;
@@ -40,6 +40,14 @@ namespace eShopSolution.BackendApi.Controllers
             if (product == null)
                 return BadRequest("Cannot find product");
             return Ok(product);
+        }
+
+        [HttpGet("featured/{languageId}/{take}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetFeaturedProducts(int take, string languageId)
+        {
+            var products = await _productService.GetFeaturedProducts(languageId, take);
+            return Ok(products);
         }
 
         [HttpPost]
@@ -91,13 +99,13 @@ namespace eShopSolution.BackendApi.Controllers
         // ======= Image ======
 
         [HttpPost("{productId}/images")]
-        public async Task<IActionResult> CreateImage(int productId,[FromForm] ProductImageCreateRequest request)
+        public async Task<IActionResult> CreateImage(int productId, [FromForm] ProductImageCreateRequest request)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            var imageId = await _productService.AddImage(productId,request);
+            var imageId = await _productService.AddImage(productId, request);
             if (imageId == 0)
                 return BadRequest();
             var image = await _productService.GetImageById(imageId);
